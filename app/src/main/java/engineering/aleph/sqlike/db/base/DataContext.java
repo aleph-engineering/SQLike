@@ -16,12 +16,20 @@ public class DataContext {
     private static final String DATABASE_NAME = "database.db";
 
     private Context mContext;
+    private String mDatabaseName;
 
     private DataBaseHelper mDataBaseHelper;
 
     public DataContext(Context context) {
         mContext = context;
         mDataBaseHelper = new DataBaseHelper(this);
+        mDatabaseName = DATABASE_NAME;
+    }
+
+    public DataContext(Context context, String databaseName) {
+        mContext = context;
+        mDataBaseHelper = new DataBaseHelper(this);
+        mDatabaseName = databaseName;
     }
 
     public SQLiteDatabase getWritableDatabase() {
@@ -37,7 +45,7 @@ public class DataContext {
         private DataContext mDataContext;
 
         private DataBaseHelper(DataContext dataContext) {
-            super(mContext, DATABASE_NAME, null, DATABASE_VERSION);
+            super(mContext, mDatabaseName, null, DATABASE_VERSION);
             mDataContext = dataContext;
         }
 
@@ -59,7 +67,7 @@ public class DataContext {
 
         @Override
         public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+            // TODO drop databases and recreate them.
         }
     }
 }

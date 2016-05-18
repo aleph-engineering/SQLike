@@ -5,6 +5,11 @@ import android.util.Log;
 
 import java.lang.reflect.Type;
 
+/*
+
+Thanks to ADA framework developers
+
+ */
 public class Helper {
 
     private static final String TAG = "Helper";
