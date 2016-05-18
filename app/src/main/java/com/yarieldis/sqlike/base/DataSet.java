@@ -1,4 +1,4 @@
-package engineering.aleph.sqlike.db.base;
+package com.yarieldis.sqlike.base;
 
 
 import android.content.ContentValues;
@@ -6,15 +6,15 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
+import com.yarieldis.sqlike.annotation.IntegerField;
+import com.yarieldis.sqlike.annotation.StringField;
+import com.yarieldis.sqlike.annotation.Table;
+import com.yarieldis.sqlike.annotation.TableField;
+
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
-
-import engineering.aleph.sqlike.db.annotation.IntegerField;
-import engineering.aleph.sqlike.db.annotation.StringField;
-import engineering.aleph.sqlike.db.annotation.Table;
-import engineering.aleph.sqlike.db.annotation.TableField;
 
 public class DataSet<T extends Entity> {
 

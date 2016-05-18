@@ -1,14 +1,16 @@
-package engineering.aleph.sqlike.db.annotation;
+package com.yarieldis.sqlike.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-@Target(ElementType.TYPE)
+
+@Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Table {
+public @interface TableField {
 
     String name() default "";
 
+    boolean required() default false;
 }

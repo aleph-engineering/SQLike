@@ -1,4 +1,4 @@
-package engineering.aleph.sqlike.db.base;
+package com.yarieldis.sqlike.base;
 
 
 import android.content.Context;

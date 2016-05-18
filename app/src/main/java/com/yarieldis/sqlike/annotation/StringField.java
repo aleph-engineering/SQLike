@@ -1,4 +1,4 @@
-package engineering.aleph.sqlike.db.annotation;
+package com.yarieldis.sqlike.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -8,5 +8,5 @@ import java.lang.annotation.Target;
 
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface IntegerField {
+public @interface StringField {
 }
